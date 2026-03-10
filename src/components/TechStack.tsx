@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-// import { Environment } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
 import {
   BallCollider,
@@ -13,14 +13,14 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/vishalsanap/images/react2.webp",
-  "/vishalsanap/images/next2.webp",
-  "/vishalsanap/images/node2.webp",
-  "/vishalsanap/images/express.webp",
-  "/vishalsanap/images/mongo.webp",
-  "/vishalsanap/images/mysql.webp",
-  "/vishalsanap/images/typescript.webp",
-  "/vishalsanap/images/javascript.webp",
+  "/images/react2.webp",
+  "/images/next2.webp",
+  "/images/node2.webp",
+  "/images/express.webp",
+  "/images/mongo.webp",
+  "/images/mysql.webp",
+  "/images/typescript.webp",
+  "/images/javascript.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -198,11 +198,11 @@ const TechStack = () => {
             />
           ))}
         </Physics>
-        {/* <Environment
-          files="/vishalsanap/models/char_enviorment.hdr"
+        <Environment
+          files="/models/char_enviorment.hdr"
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
-        /> */}
+        />
         <EffectComposer enableNormalPass={false}>
           <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
