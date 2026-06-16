@@ -39,7 +39,7 @@ const Contact = () => {
               href="https://x.com/itxzmevishal"
               target="_blank"
               data-cursor="disable"
-              className="contact-social"
+              className="contact-social" 
             >
               Twitter <MdArrowOutward />
             </a>
